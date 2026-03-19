@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OpenClaw Demo Store (Mock)</title>
-  <meta name="description" content="A lightweight mock storefront to demonstrate OpenClaw multi-agent workflow (Orchestrator + Growth + Web Ops)." />
+  <meta name="description" content="Mock storefront showing how Orchestrator + Growth Agent + Web Ops collaborate." />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
@@ -14,12 +14,13 @@
         <div class="brand__mark">OC</div>
         <div>
           <div class="brand__name">OpenClaw Demo Store</div>
-          <div class="brand__tag">Mock storefront • no real payments</div>
+          <div class="brand__tag">Multi-agent workflow showcase</div>
         </div>
       </div>
       <nav class="nav">
         <a href="#products">Products</a>
-        <a href="#how-it-works">How it works</a>
+        <a href="#marketing">Marketing plan</a>
+        <a href="#workflow">Workflow</a>
         <a href="#status">Cart</a>
       </nav>
     </div>
@@ -29,23 +30,24 @@
     <section class="hero">
       <div class="container hero__inner">
         <div>
-          <h1>Showcase: one Slack channel, three agents, one workflow.</h1>
+          <p class="pill">Slack → Linear → Shopify</p>
+          <h1>Ask once. Three agents turn it into a live storefront update.</h1>
           <p class="lede">
-            This is a lightweight example website to demonstrate OpenClaw’s multi-agent pipeline:
-            <strong>Orchestrator</strong> delegates to <strong>Growth Agent</strong> (research + copy) and <strong>Web Ops</strong> (publish + QA).
+            This mock experience shows a typical request: the user asks for a marketing plan, approves it, and
+            OpenClaw’s Growth + Web Ops agents ship the update to the site.
           </p>
           <div class="cta-row">
-            <a class="button" href="#products">View products</a>
-            <a class="button button--ghost" href="#how-it-works">See the agent flow</a>
+            <a class="button" href="#marketing">See the plan</a>
+            <a class="button button--ghost" href="#products">Explore products</a>
           </div>
-          <p class="fineprint">Cart and checkout are placeholders. No orders are processed.</p>
+          <p class="fineprint">Checkout & payments are disabled. This is for demo storytelling only.</p>
         </div>
-        <div class="card hero__card">
-          <div class="card__title">Live demo prompts (Slack)</div>
+        <div class="hero__card card">
+          <div class="card__title">Live Slack prompts (sample)</div>
           <ol class="list">
-            <li><code>@openclaw Find 3 trends for minimal wallets and draft product copy.</code></li>
-            <li><code>@openclaw Turn this copy into a product page + SEO meta.</code></li>
-            <li><code>@openclaw Publish the page and confirm it’s live.</code></li>
+            <li><code>@openclaw Draft a playful spring launch plan for the CarbonFold wallet.</code></li>
+            <li><code>@openclaw Approved. Publish the plan: product copy + hero banner update.</code></li>
+            <li><code>@openclaw Confirm the page is live and summarize results.</code></li>
           </ol>
         </div>
       </div>
@@ -54,15 +56,24 @@
     <section id="products" class="section">
       <div class="container">
         <div class="section__head">
-          <h2>Featured products</h2>
-          <p class="muted">Mock items for the workflow demo.</p>
+          <div>
+            <h2>Featured products</h2>
+            <p class="muted">Fun, fictional gear for the demo.</p>
+          </div>
+          <div class="tag-cloud">
+            <span>Everyday carry</span>
+            <span>Weekend</span>
+            <span>Travel</span>
+            <span>Outdoors</span>
+          </div>
         </div>
 
-        <div class="grid">
+        <div class="grid grid--3">
           <article class="product card">
             <div class="product__img" aria-hidden="true">Minimal Wallet</div>
             <h3>CarbonFold Wallet</h3>
-            <p class="muted">Ultra-slim, durable, RFID optional. (Mock description)</p>
+            <p class="muted">Ultra-slim carbon weave, magnetic cash strap, RFID shielding.</p>
+            <div class="chips"><span>Ships in 2 days</span><span>RFID optional</span></div>
             <div class="product__row">
               <div class="price">$39</div>
               <button class="button" data-add-to-cart="CarbonFold Wallet" data-price="39">Add to cart</button>
@@ -70,9 +81,10 @@
           </article>
 
           <article class="product card">
-            <div class="product__img" aria-hidden="true">Everyday Tote</div>
+            <div class="product__img" aria-hidden="true">Tote</div>
             <h3>Weekender Tote</h3>
-            <p class="muted">Lightweight carry with modular pockets. (Mock description)</p>
+            <p class="muted">Soft-shell carry with modular cubes and a built-in laundry sleeve.</p>
+            <div class="chips"><span>Machine washable</span><span>3 colors</span></div>
             <div class="product__row">
               <div class="price">$54</div>
               <button class="button" data-add-to-cart="Weekender Tote" data-price="54">Add to cart</button>
@@ -82,64 +94,171 @@
           <article class="product card">
             <div class="product__img" aria-hidden="true">Coffee Kit</div>
             <h3>TrailBrew Kit</h3>
-            <p class="muted">Compact pour-over kit for travel. (Mock description)</p>
+            <p class="muted">Compact pour-over kit with reusable filters and collapsible kettle.</p>
+            <div class="chips"><span>Barista tested</span><span>1lb</span></div>
             <div class="product__row">
               <div class="price">$28</div>
               <button class="button" data-add-to-cart="TrailBrew Kit" data-price="28">Add to cart</button>
             </div>
           </article>
+
+          <article class="product card">
+            <div class="product__img" aria-hidden="true">Notebook</div>
+            <h3>Orbit Notes</h3>
+            <p class="muted">Reusable notebook that uploads sketches via NFC tap.</p>
+            <div class="chips"><span>Graph + blank</span><span>Refill pack</span></div>
+            <div class="product__row">
+              <div class="price">$19</div>
+              <button class="button" data-add-to-cart="Orbit Notes" data-price="19">Add to cart</button>
+            </div>
+          </article>
+
+          <article class="product card">
+            <div class="product__img" aria-hidden="true">Lamp</div>
+            <h3>GlowBeam Mini</h3>
+            <p class="muted">Desk light with gesture dimming + Pomodoro reminder pulses.</p>
+            <div class="chips"><span>USB-C</span><span>Matte black</span></div>
+            <div class="product__row">
+              <div class="price">$44</div>
+              <button class="button" data-add-to-cart="GlowBeam Mini" data-price="44">Add to cart</button>
+            </div>
+          </article>
+
+          <article class="product card">
+            <div class="product__img" aria-hidden="true">Speaker</div>
+            <h3>Ripple Pocket Speaker</h3>
+            <p class="muted">Clip-on Bluetooth speaker with AI noise smartness.</p>
+            <div class="chips"><span>Water resistant</span><span>12h battery</span></div>
+            <div class="product__row">
+              <div class="price">$32</div>
+              <button class="button" data-add-to-cart="Ripple Speaker" data-price="32">Add to cart</button>
+            </div>
+          </article>
         </div>
       </div>
     </section>
-
-    <section id="how-it-works" class="section section--alt">
+    <section id="marketing" class="section section--alt">
       <div class="container">
         <div class="section__head">
-          <h2>How the agents work together</h2>
-          <p class="muted">Single Slack channel → orchestrated execution.</p>
+          <div>
+            <h2>Example marketing plan (drafted by Growth Agent)</h2>
+            <p class="muted">Prompt: “Playful spring campaign for CarbonFold Wallet.”</p>
+          </div>
+          <div class="plan-status">
+            <span class="badge badge--approved">Approved</span>
+            <span class="muted">Handed off to Web Ops</span>
+          </div>
         </div>
 
-        <div class="steps">
-          <div class="step card">
-            <div class="step__kicker">1) Orchestrator</div>
-            <h3>Intake → plan → delegate</h3>
+        <div class="plan-grid">
+          <article class="card">
+            <div class="step__kicker">Positioning</div>
+            <h3>“Carry less, spring more.”</h3>
             <ul>
-              <li>Clarifies goal, constraints, and definition of done</li>
-              <li>Creates the task breakdown (Linear)</li>
-              <li>Spawns Growth + Web Ops as needed</li>
+              <li>Lean into “zero bulk” pockets for festival and travel season.</li>
+              <li>Hero phrase: <em>“Pocket space reclaimed.”</em></li>
+              <li>Pair with UV-reactive hero image + confetti micro animation.</li>
             </ul>
-          </div>
+          </article>
 
-          <div class="step card">
-            <div class="step__kicker">2) Growth Agent</div>
-            <h3>Research → positioning → copy</h3>
+          <article class="card">
+            <div class="step__kicker">Copy blocks</div>
+            <h3>Assets generated</h3>
             <ul>
-              <li>Trend brief + key insights</li>
-              <li>Headline/value prop variants</li>
-              <li>SEO meta + keyword cluster + tags</li>
+              <li>Hero headline + subhead variants (3)</li>
+              <li>Feature bullets (RFID optional, elastic band swap)</li>
+              <li>SEO title + meta description + keyword set</li>
+              <li>TikTok hooks (“Pocket cleanse challenge”)</li>
             </ul>
-          </div>
+          </article>
 
-          <div class="step card">
-            <div class="step__kicker">3) Web Ops</div>
-            <h3>Publish → QA → confirm live</h3>
-            <ul>
-              <li>Updates CMS fields (Shopify)</li>
-              <li>Checks mobile/desktop rendering</li>
-              <li>Reports a deploy note with URL + verifications</li>
-            </ul>
+          <article class="card">
+            <div class="step__kicker">Schedule</div>
+            <h3>2-day rollout</h3>
+            <div class="timeline">
+              <div>
+                <strong>Day 0</strong>
+                <span>Approve plan, finalize copy pack</span>
+              </div>
+              <div>
+                <strong>Day 1</strong>
+                <span>Web Ops update hero + product page</span>
+              </div>
+              <div>
+                <strong>Day 2</strong>
+                <span>Post on social + email micro-blast</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="approval card">
+          <div>
+            <div class="approval__title">User approval notes</div>
+            <p class="muted">“Love the ‘pocket cleanse’ messaging. Please use Variant B headline and keep animation subtle.”</p>
+          </div>
+          <div>
+            <div class="chips chips--tight">
+              <span>Variant B hero</span>
+              <span>Confetti animation 20%</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <section id="workflow" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Workflow snapshot</h2>
+          <p class="muted">How this deploy moves from Slack to Shopify.</p>
+        </div>
+
+        <div class="workflow-grid">
+          <article class="workflow card">
+            <div class="workflow__header">
+              <span>Orchestrator</span>
+              <span class="badge">Slack intake</span>
+            </div>
+            <p>Summarizes request, sets Linear tasks, and pings Growth + Web Ops.</p>
+            <ul>
+              <li>Task: “Draft plan” → Growth Agent</li>
+              <li>Task: “Publish hero + PDP” → Web Ops</li>
+            </ul>
+          </article>
+
+          <article class="workflow card">
+            <div class="workflow__header">
+              <span>Growth Agent</span>
+              <span class="badge">Research & copy</span>
+            </div>
+            <p>Sources spring EDC trends, generates copy pack, SEO, hooks.</p>
+            <ul>
+              <li>Uploads plan to Linear issue</li>
+              <li>Flags assumptions (animation intensity, CTA color)</li>
+            </ul>
+          </article>
+
+          <article class="workflow card">
+            <div class="workflow__header">
+              <span>Web Ops</span>
+              <span class="badge">Publish</span>
+            </div>
+            <p>Updates hero, PDP, alt text, and verifies on desktop + mobile.</p>
+            <ul>
+              <li>Checklist: copy fields, SEO, images, mobile QA</li>
+              <li>Deploy note posted back to Slack with URL</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
     <section id="status" class="section">
       <div class="container">
         <div class="section__head">
           <h2>Cart (mock)</h2>
-          <p class="muted">UI placeholder only. No checkout is implemented.</p>
+          <p class="muted">UI-only cart to show front-end changes.</p>
         </div>
-
         <div class="cart card">
           <div class="cart__row">
             <strong>Items</strong>
@@ -157,8 +276,16 @@
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <div class="muted">OpenClaw Demo Store — mock site for integration testing.</div>
+    <div class="container footer__inner">
+      <div>
+        <div class="muted">© OpenClaw Demo Store — scripted mock, no real transactions.</div>
+        <div class="muted">Growth + Web Ops sections update automatically when the agents finish their tasks.</div>
+      </div>
+      <div class="chips chips--tight">
+        <span>#orchestrator</span>
+        <span>#growth-agent</span>
+        <span>#webops</span>
+      </div>
     </div>
   </footer>
 
