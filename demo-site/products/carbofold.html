@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CarbonFold Wallet • OpenClaw Demo Store</title>
+  <meta name="description" content="Mock product page. Used to demonstrate Growth Agent copy + Web Ops publishing." />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <div class="brand">
+        <div class="brand__mark">OC</div>
+        <div>
+          <div class="brand__name">OpenClaw Demo Store</div>
+          <div class="brand__tag">Product page (mock)</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="./index.html">Products</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="grid" style="grid-template-columns:1.1fr .9fr">
+          <div class="card">
+            <div class="product__img" aria-hidden="true" style="height:220px">CarbonFold Wallet</div>
+            <h1 style="font-size:34px;margin:0 0 10px">Pocket space reclaimed.</h1>
+            <p class="lede" style="margin-bottom:12px">A slim, durable wallet for spring travel, festival days, and everyday carry.</p>
+            <div class="chips">
+              <span>Ultra-slim</span>
+              <span>Magnetic strap</span>
+              <span>RFID optional</span>
+            </div>
+            <h3 style="margin-top:16px">Why you’ll like it</h3>
+            <ul>
+              <li>Holds 8–10 cards without the brick-in-pocket feel.</li>
+              <li>Quick-access cash strap for transit + tips.</li>
+              <li>Built for daily abuse (and still looks clean).</li>
+            </ul>
+            <h3>FAQ</h3>
+            <details>
+              <summary>Does it fit US + EU bills?</summary>
+              <p class="muted">Yes—folded once under the strap.</p>
+            </details>
+            <details>
+              <summary>Is RFID included?</summary>
+              <p class="muted">This is a mock page. In a real store you’d choose a variant.</p>
+            </details>
+          </div>
+
+          <aside class="card">
+            <div class="card__title">Buy (mock)</div>
+            <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:10px">
+              <div class="price" style="font-size:28px">$39</div>
+              <span class="muted">Free shipping (demo)</span>
+            </div>
+            <button class="button" data-add-to-cart="CarbonFold Wallet" data-price="39">Add to cart</button>
+            <div style="height:12px"></div>
+            <button class="button button--disabled" disabled>Checkout (disabled)</button>
+
+            <div style="height:18px"></div>
+            <div class="card__title">Change log (demo)</div>
+            <p class="muted">Web Ops appends a note here when they "publish" updates.</p>
+            <ul class="muted">
+              <li>(example) 2026-03-19 — Updated hero headline + meta description.</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2>Marketing plan snippet (demo)</h2>
+          <p class="muted">This block is what Growth Agent would generate and the user would approve.</p>
+        </div>
+        <div class="card">
+          <div class="step__kicker">Campaign</div>
+          <h3>“Carry less, spring more.”</h3>
+          <ul>
+            <li>Hook: “Pocket cleanse challenge” (TikTok/Reels)</li>
+            <li>CTA: “Reclaim pocket space”</li>
+            <li>SEO: “slim wallet”, “minimal wallet”, “RFID wallet”</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Cart</h2>
+          <p class="muted">Shared cart UI across pages.</p>
+        </div>
+        <div class="cart card">
+          <div class="cart__row">
+            <strong>Items</strong>
+            <button class="button button--ghost" id="cartClear">Clear</button>
+          </div>
+          <ul id="cartItems" class="cart__items"></ul>
+          <div class="cart__row cart__row--total">
+            <div class="muted">Total</div>
+            <div id="cartTotal" class="price">$0</div>
+          </div>
+          <button class="button button--disabled" disabled>Checkout (disabled)</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../site.js"></script>
+</body>
+</html>

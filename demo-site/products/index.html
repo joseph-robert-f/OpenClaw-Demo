@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Products • OpenClaw Demo Store</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <div class="brand">
+        <div class="brand__mark">OC</div>
+        <div>
+          <div class="brand__name">OpenClaw Demo Store</div>
+          <div class="brand__tag">Products (mock)</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="../index.html#products">Home</a>
+        <a href="./index.html">All products</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2>Products</h2>
+          <p class="muted">These pages exist so Web Ops can “publish” updates in the demo.</p>
+        </div>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="product card">
+          <div class="product__img" aria-hidden="true">Wallet</div>
+          <h3>CarbonFold Wallet</h3>
+          <p class="muted">Ultra-slim carbon weave + magnetic strap.</p>
+          <div class="product__row">
+            <div class="price">$39</div>
+            <a class="button" href="./carbofold.html">View</a>
+          </div>
+        </article>
+
+        <article class="product card">
+          <div class="product__img" aria-hidden="true">Tote</div>
+          <h3>Weekender Tote</h3>
+          <p class="muted">Modular cubes + laundry sleeve.</p>
+          <div class="product__row">
+            <div class="price">$54</div>
+            <a class="button" href="./weekender.html">View</a>
+          </div>
+        </article>
+
+        <article class="product card">
+          <div class="product__img" aria-hidden="true">Coffee</div>
+          <h3>TrailBrew Kit</h3>
+          <p class="muted">Pour-over kit for travel mornings.</p>
+          <div class="product__row">
+            <div class="price">$28</div>
+            <a class="button" href="./trailbrew.html">View</a>
+          </div>
+        </article>
+      </div>
+
+      <div style="height:18px"></div>
+
+      <div class="card">
+        <div class="card__title">Demo instructions</div>
+        <p class="muted">In Slack, ask the agent to update the CarbonFold product page headline + SEO meta. Then have Web Ops “publish” it by editing <code>products/carbofold.html</code> and pushing to GitHub.</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
